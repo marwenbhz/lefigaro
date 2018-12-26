@@ -14,6 +14,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
  
 # Run the crawler when the container launches.
-#CMD [ "python", "./crawl_lefigaro.py" ]
+CMD [ "python", "./crawl_lefigaro.py" ]
  
 
