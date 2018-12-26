@@ -111,7 +111,7 @@ class LefigarospiderSpider(scrapy.Spider):
 	    code = response.css('p.agency-localisation::text').extract()
 	    if len (code) != 0:
 	        code_postal = code[1].strip()[:5] if len(code) == 2 else code[0].strip()[:5]
-		item['CODE_POSTAL'] = code_postal if ville[:1].isdigit() == True else ' '
+		item['CODE_POSTAL'] = code_postal if code_postal.isdigit() == True else ' '
 	except:
 	    print('ERROR CODE POSTAL PARSE...' + response.url)
 	try:
