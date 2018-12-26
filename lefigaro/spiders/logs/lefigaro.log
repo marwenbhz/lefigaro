@@ -1,0 +1,15 @@
+2018-12-26 14:05:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://proprietes.lefigaro.fr/annonces/appartement-achat-prestige-ile+maurice/20070013/> (referer: https://proprietes.lefigaro.fr/annonces/)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/dist-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/databiz206/Marwen/formation/formation/lefigaro/lefigaro/spiders/lefigarospider.py", line 99, in parse_page
+    elif keys[1].find('chambre') >=0:
+IndexError: list index out of range
