@@ -96,7 +96,7 @@ class LefigarospiderSpider(scrapy.Spider):
                 item['M2_TOTAL'] = response.css('ul.hz-list > li > span.nb::text').extract()[0] + ' ' + response.css('ul.hz-list > li > span.txt::text').extract()[0]
             elif keys[0].find('pi') >=0:
                 item['NBR_PIECES'] = response.css('ul.hz-list > li > span.nb::text').extract()[0] + ' ' + response.css('ul.hz-list > li > span.txt::text').extract()[0]
-            elif keys[1].find('chambre') >=0:
+            elif keys[0].find('chambre') >=0:
                 item['NBR_CHAMBRES'] = response.css('ul.hz-list > li > span.nb::text').extract()[0] + ' ' + response.css('ul.hz-list > li > span.txt::text').extract()[0]
 
 	try:
